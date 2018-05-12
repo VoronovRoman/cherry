@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialRegular/ArialRegular.eot");
+  src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #e4e1e7; }
+
+.header {
+  height: 70px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#373e49), to(#262e36));
+  background: -webkit-linear-gradient(top, #373e49 0%, #262e36 100%);
+  background: -o-linear-gradient(top, #373e49 0%, #262e36 100%);
+  background: linear-gradient(to bottom, #373e49 0%, #262e36 100%); }
+  .header .container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .header .container .logo {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #a5adb8;
+      font: 700 30px 'Arial'; }
+      .header .container .logo:first-letter {
+        color: #ae4b5d; }
+    .header .container form input {
+      width: 200px;
+      height: 35px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      background-color: #24272d;
+      border: 1px solid #ae4b5d;
+      font-size: 14px;
+      padding-left: 10px;
+      color: #a5adb8; }
