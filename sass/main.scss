@@ -4,7 +4,9 @@
 	box-sizing: border-box;
 	outline: none;
 }
-
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Arial';
+}
 p{
 	font: 400 14px 'Arial';
 }
@@ -73,8 +75,44 @@ p{
 		}
 	}
 }
-
 // HEADER END
+
+// SLIDER START
+section.slider{
+	max-width:980px;
+	position: relative;
+	margin: 0 auto;
+	.desc{
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		color: #a5adb8;
+		max-width: 480px;
+		h2{
+			color: #a5adb8;
+			font: 700 30px 'Arial';
+			line-height: .8;
+			margin-bottom: 20px;
+			&:first-letter{
+				color: $red;
+			}
+			span{
+				color: #282d33;
+				font-size: 18px;
+			}
+		}
+		.title{
+			font-size: 18px;
+			margin-bottom: 5px;
+		}
+		.text{
+			font-size: 14px;
+			color: #d9dcdf;
+			line-height: 1.3;
+		}
+	}
+
+}
 
 
 
