@@ -72,6 +72,9 @@ p{
 				height: 34px;
 				width: 34px;
 				cursor: pointer;
+				&:hover{
+					background-color: lighten(#95161f, 10%);
+				}
 			}
 		}
 	}
@@ -148,8 +151,47 @@ nav{
 	}
 }
 
+// MENU END
+
+// BREADCRUMS START
+
+.product_breadcrumbs{
+	background-color: #f3f3f3;
+	margin: 0 auto;
+	max-width: 980px;
+	.breadcrumbs{
+		height: 25px;
+		display: flex;
+		flex-flow: row wrap;
+		padding: 3px 0 0 25px;
+		li{
+			color: red;
+			position: relative;
+			&:after{
+				content:"/";
+				font-size: 11px;	
+			}
+			&:last-child::after{
+				content:"";
+			}
+			&:last-child a{
+				color: #a5adb8;
+				text-decoration: none;	
+			}
+
+			a{
+				color: $red;
+				font-size: 11px;
+				padding: 0 3px;
+			}
+		}
+	}
+}
 
 
+// BREADCRUMS END
+
+// CONTENT START
 
 
 

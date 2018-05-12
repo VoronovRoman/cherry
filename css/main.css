@@ -79,6 +79,8 @@ p {
       height: 34px;
       width: 34px;
       cursor: pointer; }
+      .header .container_head form button:hover {
+        background-color: #c11d28; }
 
 section.slider {
   max-width: 980px;
@@ -141,3 +143,35 @@ nav {
       letter-spacing: 1px; }
       nav .menu li a:hover {
         background-color: #c11d28; }
+
+.product_breadcrumbs {
+  background-color: #f3f3f3;
+  margin: 0 auto;
+  max-width: 980px; }
+  .product_breadcrumbs .breadcrumbs {
+    height: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 3px 0 0 25px; }
+    .product_breadcrumbs .breadcrumbs li {
+      color: red;
+      position: relative; }
+      .product_breadcrumbs .breadcrumbs li:after {
+        content: "/";
+        font-size: 11px; }
+      .product_breadcrumbs .breadcrumbs li:last-child::after {
+        content: ""; }
+      .product_breadcrumbs .breadcrumbs li:last-child a {
+        color: #a5adb8;
+        text-decoration: none; }
+      .product_breadcrumbs .breadcrumbs li a {
+        color: #ae4b5d;
+        font-size: 11px;
+        padding: 0 3px; }
