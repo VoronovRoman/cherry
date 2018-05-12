@@ -1,8 +1,12 @@
 @import 'fonts';
 @import 'variables';
-
 *{
 	box-sizing: border-box;
+	outline: none;
+}
+
+p{
+	font: 400 14px 'Arial';
 }
 
 .wrapper{
@@ -11,41 +15,66 @@
 	background-color: #e4e1e7;
 }
 
+
+// HEADER START
+
 .header{
 	height: 70px;
 	background: linear-gradient(to bottom, #373e49 0%,#262e36 100%);
-	.container{
+	.container_head{
+		height: inherit;
 		max-width: 960px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		position: relative;
 		.logo{
 			display: block;
 			text-decoration: none;
 			text-transform: uppercase;
 			color: #a5adb8;
 			font: 700 30px 'Arial';
+			position: absolute;
+			top: 10px;
 
 			&:first-letter{
 				color: $red;
 			}
 		}
-		form input{
-			width: 200px;
-			height: 35px;
-			border-radius:5px;
-			background-color: #24272d;
-			border: 1px solid $red;			
-			font-size: 14px;
-			padding-left: 10px;
-			color: $grey;
-			
+		p{
+			color: #656f7a;
+			font-size:12px;
+			margin-top: 30px;
+			font-weight: 700;
+
+
+		}
+		form {
+			input{
+				width: 200px;
+				height: 35px;
+				border-radius:5px;
+				background-color: #24272d;
+				border: 1px solid $red;			
+				font-size: 14px;
+				padding-left: 10px;
+				color: $grey;			
+			}
+			button{
+				background-color: $red;
+				border: 0;
+				border-radius: 10%;
+				color: #fff;
+				height: 34px;
+				width: 34px;
+				cursor: pointer;
+			}
 		}
 	}
-
 }
 
-
+// HEADER END
 
 
 
