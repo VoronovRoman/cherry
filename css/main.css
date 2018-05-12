@@ -10,7 +10,8 @@
           box-sizing: border-box;
   outline: none; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+a {
   font-family: 'Arial'; }
 
 p {
@@ -82,7 +83,8 @@ p {
 section.slider {
   max-width: 980px;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 239px; }
   section.slider .desc {
     position: absolute;
     top: 40px;
@@ -106,3 +108,36 @@ section.slider {
       font-size: 14px;
       color: #d9dcdf;
       line-height: 1.3; }
+
+nav {
+  background-color: #95161f;
+  max-width: 980px;
+  margin: 0 auto; }
+  nav .menu {
+    height: 36px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    nav .menu li:last-child {
+      margin-right: 20px; }
+    nav .menu li a {
+      padding: 9px 25px;
+      color: #fff;
+      text-decoration: none;
+      -webkit-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px; }
+      nav .menu li a:hover {
+        background-color: #c11d28; }
