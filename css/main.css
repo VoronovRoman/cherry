@@ -14,14 +14,21 @@ h1, h2, h3, h4, h5, h6,
 a {
   font-family: 'Arial'; }
 
-p {
-  font: 400 14px 'Arial'; }
+p, li {
+  font: 400 14px 'Arial';
+  color: #5c646e; }
 
 h2 {
   color: #a5adb8;
   font: 700 30px 'Arial'; }
   h2:first-letter {
     color: #ae4b5d; }
+
+a {
+  color: #95161f; }
+
+mark {
+  background-color: #dedede; }
 
 .wrapper {
   background-color: #e4e1e7; }
@@ -223,6 +230,11 @@ section.content {
     width: -webkit-calc(100% - 235px);
     width: calc(100% - 235px);
     padding: 0 20px; }
+    section.content .about h2 {
+      font-size: 24px;
+      margin-bottom: 10px; }
+    section.content .about p.text {
+      margin-bottom: 10px; }
     section.content .about .items, section.content .about .lists {
       display: -webkit-box;
       display: -webkit-flex;
@@ -232,7 +244,8 @@ section.content {
       -webkit-box-direction: normal;
       -webkit-flex-flow: row wrap;
           -ms-flex-flow: row wrap;
-              flex-flow: row wrap; }
+              flex-flow: row wrap;
+      margin-bottom: 30px; }
       section.content .about .items .item, section.content .about .lists .item {
         margin-right: 15px; }
         section.content .about .items .item p, section.content .about .lists .item p {
@@ -244,29 +257,51 @@ section.content {
           border: 1px solid #fff;
           -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
                   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3); }
+          section.content .about .items .item img:hover, section.content .about .lists .item img:hover {
+            -webkit-transform: scale(1.1, 1.1);
+                -ms-transform: scale(1.1, 1.1);
+                    transform: scale(1.1, 1.1);
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
     section.content .about .lists {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-    section.content .about table.table {
-      font-family: Arial, Helvetica, sans-serif;
-      border: 0px solid #1C6EA4;
+      section.content .about .lists ul.circle {
+        list-style-type: disc; }
+      section.content .about .lists ul.unstyle {
+        list-style-type: none; }
+      section.content .about .lists ul.numb {
+        list-style-type: decimal; }
+    section.content .about .table {
+      font-family: Arial, sans-serif;
       background-color: #282D33;
-      width: 690px;
+      width: 100%;
       height: 270px;
-      text-align: left;
-      border-collapse: collapse; }
-    section.content .about table.table td, section.content .about table.table th {
-      border: 1px solid #FFFFFF;
-      padding: 0px 1px; }
-    section.content .about table.table tbody td {
-      font-size: 12px;
-      color: #A5ADB8; }
-    section.content .about table.table thead {
-      background: #9C4757; }
-    section.content .about table.table thead th {
-      font-size: 12px;
-      font-weight: bold;
-      color: #FFFFFF;
-      text-align: center; }
+      -webkit-border-radius: 10px;
+              border-radius: 10px;
+      overflow: hidden;
+      margin: 0 auto 60px; }
+      section.content .about .table thead {
+        background: #9C4757; }
+        section.content .about .table thead tr {
+          height: 30px; }
+        section.content .about .table thead th {
+          font-size: 12px;
+          font-weight: bold;
+          color: #FFFFFF;
+          text-align: center;
+          vertical-align: middle;
+          border: 1px solid #fff; }
+      section.content .about .table tbody tr:hover {
+        background-color: #555f6c; }
+      section.content .about .table tbody tr td {
+        font-size: 12px;
+        color: #A5ADB8;
+        padding: 0 5px 0 10px;
+        border: 1px solid #fff;
+        vertical-align: middle; }
+        section.content .about .table tbody tr td a {
+          color: #d08b98; }
