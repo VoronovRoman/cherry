@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Arial";
   src: url("../fonts/ArialRegular/ArialRegular.eot");
@@ -200,7 +201,8 @@ section.content {
       border: 1px solid #d8dbde;
       padding: 15px 10px;
       margin-left: 20px;
-      background-color: #f3f3f3; }
+      background-color: #f3f3f3;
+      margin-bottom: 40px; }
       section.content aside ul li {
         margin-bottom: 15px; }
         section.content aside ul li input, section.content aside ul li select {
@@ -226,6 +228,15 @@ section.content {
           margin-bottom: -5px; }
         section.content aside ul li:last-child input:hover {
           background-color: #df3e49; }
+    section.content aside .news {
+      padding-left: 20px; }
+      section.content aside .news h6 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px; }
+      section.content aside .news p, section.content aside .news a {
+        font-size: 12px;
+        margin-bottom: 10px; }
   section.content .about {
     width: -webkit-calc(100% - 235px);
     width: calc(100% - 235px);
@@ -271,10 +282,18 @@ section.content {
               justify-content: space-between; }
       section.content .about .lists ul.circle {
         list-style-type: disc; }
+        section.content .about .lists ul.circle li {
+          margin-left: 20px; }
       section.content .about .lists ul.unstyle {
         list-style-type: none; }
       section.content .about .lists ul.numb {
         list-style-type: decimal; }
+        section.content .about .lists ul.numb li {
+          margin-left: 20px; }
+      section.content .about .lists p {
+        color: #5c646e;
+        font-weight: 600;
+        margin-bottom: 5px; }
     section.content .about .table {
       font-family: Arial, sans-serif;
       background-color: #282D33;
@@ -305,3 +324,74 @@ section.content {
         vertical-align: middle; }
         section.content .about .table tbody tr td a {
           color: #d08b98; }
+
+footer {
+  background-color: #282D33;
+  padding: 40px 0;
+  position: relative; }
+  footer::before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: #ae4b5d;
+    position: absolute;
+    top: 0; }
+  footer .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+    footer .container h4 {
+      font-size: 18px;
+      color: #a5adb8;
+      margin-bottom: 20px;
+      position: relative; }
+      footer .container h4::after {
+        content: "";
+        width: 260px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 25px; }
+      footer .container h4 span {
+        display: inline-block;
+        text-transform: uppercase; }
+        footer .container h4 span:first-letter {
+          color: #ae4b5d; }
+    footer .container .hours p {
+      margin-bottom: 10px; }
+    footer .container .hours ul {
+      list-style-image: url("../img/time.png");
+      margin-left: 20px; }
+      footer .container .hours ul li {
+        padding: 2px 0; }
+    footer .container .local a {
+      color: inherit;
+      text-decoration: none; }
+    footer .container .local li {
+      margin-left: 5px; }
+      footer .container .local li::before {
+        content: "• ";
+        font-size: 20px;
+        color: #ae4b5d; }
+    footer .container .local p {
+      font-size: 14px;
+      font-weight: 600;
+      color: #a5adb8;
+      margin-top: 10px; }
+    footer .container .location li {
+      padding: 4px 0; }
+      footer .container .location li a {
+        color: #ae4b5d; }
+      footer .container .location li .tel {
+        color: inherit;
+        text-decoration: none; }

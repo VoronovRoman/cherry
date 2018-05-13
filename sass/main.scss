@@ -220,6 +220,7 @@ section.content{
 			padding: 15px 10px;
 			margin-left: 20px;
 			background-color: #f3f3f3;
+			margin-bottom: 40px;
 			li{
 				margin-bottom: 15px;
 				input,select{
@@ -248,9 +249,23 @@ section.content{
 					background-color: lighten(#9d1a23, 20%);
 				}
 			}
+		}
+		.news{
+			padding-left: 20px;
+			h6{
+				font-size: 18px;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+			p,a{
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
 		}	
 	}
 	//ASIDE END
+
+
 
 	//ABOUT START
 	.about{
@@ -292,17 +307,25 @@ section.content{
 			justify-content: space-between;
 			ul.circle{
 				list-style-type: disc;
+				li{
+				margin-left: 20px;
+				}
 			}
 			ul.unstyle{
 				list-style-type: none;
 			}
 			ul.numb{
 				list-style-type: decimal;
+				li{
+				margin-left: 20px;
+				}
+			}
+			p{
+				color: #5c646e;
+				font-weight: 600;
+				margin-bottom: 5px;
 			}
 		}
-
-
-
 
 	//TABLE FUCKING SHIT START
 		.table {
@@ -346,7 +369,7 @@ section.content{
 			}
 		}
 
-		//MEDIAAAAAA SUKA
+		//MEDIAAAAAA 
 
 		// @media screen and (max-width: 980px) {
 			// 	table {
@@ -388,8 +411,99 @@ section.content{
 	}
 }
 
+		//ABOUT END
 
+	
 
+	//FOOTER START
 
+footer{
+	background-color: #282D33;
+	padding: 40px 0;
+	position: relative;
+	&::before{
+		content:"";
+		width: 100%;
+		height: 10px;
+		background-color: $red;
+		position: absolute;
+		top: 0;
+	}
+	.container{
+		display: flex;
+		justify-content: space-around;
+		flex-flow: row wrap;
+		h4{
+			font-size: 18px;
+			color: #a5adb8;
+			margin-bottom: 20px;
+			position: relative;
+
+			&::after{
+				content:"";
+				width: 260px;
+				height: 1px;
+				background-color: #000;
+				position: absolute;
+				left: 0;
+				top: 25px;
+			}
+			span{
+				display: inline-block;
+				text-transform: uppercase;
+				&:first-letter{
+					color: $red;
+				}
+			}
+		}
+
+		.hours{
+			p{
+				margin-bottom: 10px;
+			}
+			ul{
+				list-style-image: url('../img/time.png');
+				margin-left: 20px;
+				li{
+					padding: 2px 0;
+				}
+			}
+		}
+		.local{
+			a{
+				color: inherit;
+				text-decoration: none;
+			}
+			li{
+				margin-left: 5px;
+				&::before{
+					content:"• ";
+					font-size: 20px;
+					color: $red;
+				}
+			}
+			p{
+				font-size: 14px;
+				font-weight: 600;
+				color: #a5adb8;
+				margin-top: 10px;
+			}
+		}
+		.location{
+			li{
+				padding: 4px 0;
+				a{
+					color: $red;
+				}
+				.tel{
+					color: inherit;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+	//FOOTER END
 
 
