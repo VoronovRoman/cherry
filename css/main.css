@@ -97,10 +97,17 @@ header {
         background-color: #c11d28; }
 
 section.slider {
-  height: 239px;
+  height: 240px;
   position: relative; }
-  section.slider img {
-    width: 100%; }
+  section.slider .slide {
+    height: 240px; }
+    section.slider .slide img {
+      width: 100%; }
+      @media screen and (max-width: 995px) {
+        section.slider .slide img {
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover; } }
   section.slider .desc {
     position: absolute;
     top: 40px;
@@ -258,7 +265,9 @@ section.content {
               flex-flow: row wrap;
       margin-bottom: 30px; }
       section.content .about .items .item, section.content .about .lists .item {
-        margin-right: 15px; }
+        padding-right: 15px;
+        width: -webkit-calc(100% / 3);
+        width: calc(100% / 3); }
         section.content .about .items .item p, section.content .about .lists .item p {
           font-size: 18px;
           font-weight: 600;
@@ -349,6 +358,8 @@ footer {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; }
+    footer .container div {
+      padding: 0 10px; }
     footer .container h4 {
       font-size: 18px;
       color: #a5adb8;
