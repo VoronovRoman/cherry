@@ -52,6 +52,7 @@ header{
 		height: 70px;
 		position: relative;
 		padding: 0 20px;
+
 		.logo{
 			display: block;
 			text-decoration: none;
@@ -70,10 +71,17 @@ header{
 			font-size:12px;
 			margin-top: 30px;
 			font-weight: 700;
-
+			@media screen and (max-width: 444px){
+				display: none;
+			}
 
 		}
 		form {
+			display: flex;
+			align-items: center;
+			@media screen and (max-width: 444px){
+				display: none;
+			} 
 			input{
 				width: 200px;
 				height: 35px;
@@ -87,13 +95,17 @@ header{
 			button{
 				background-color: $red;
 				border: 0;
+				fill: #fff;
 				border-radius: 10%;
-				color: #fff;
 				height: 34px;
 				width: 34px;
 				cursor: pointer;
+				margin-left: 5px;
 				&:hover{
 					background-color: lighten(#95161f, 10%);
+				}
+				svg{
+					width: 10px;
 				}
 			}
 		}
@@ -122,6 +134,11 @@ section.slider{
 		top: 40px;
 		left: 40px;
 		max-width: 480px;
+		padding-right: 5px;
+		@media screen and (max-width: 500px){
+				left: 10px;
+				top: 20px;
+			}
 		h2{
 			line-height: .8;
 			margin-bottom: 20px;
@@ -155,8 +172,11 @@ nav{
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		height: 36px;
 		flex-flow: row wrap;
+		
+		li{
+			padding: 9px 0;
+
 		a{
 			padding: 9px 25px;
 			color: #fff;
@@ -167,6 +187,20 @@ nav{
 			letter-spacing: 1px;
 			&:hover{
 				background-color: lighten(#95161f, 10%);
+			}
+		}
+	}
+	}
+}
+@media screen and (max-width: 739px) {
+	nav .menu{
+		flex-flow: column;
+		li{
+			width: 100%;
+			text-align: center;
+			padding: 0;
+			a{
+				display: block;
 			}
 		}
 	}
@@ -209,18 +243,19 @@ nav{
 
 
 
-// CONTENT START
-	
 
+// CONTENT START
 section.content{
 	padding-top: 20px; 
 	display: flex;
 	flex-flow: row wrap;
+	flex-direction: row-reverse;
 	background-color: #fff;
 
 	//ASIDE START	
 	aside{
 		width: 235px;
+		margin-bottom: 20px;
 		ul{
 			border: 1px solid #d8dbde;
 			padding: 15px 10px;
@@ -288,11 +323,14 @@ section.content{
 		.items, .lists{
 			display: flex;
 			flex-flow: row wrap;
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 
 			.item{
-				padding-right:15px;
-				width: calc(100% / 3);
+				padding-right: 15px;
+				margin: 0 auto 10px;
+				@media screen and (max-width: 747px) {
+					width: 100%;
+				}
 				p{
 					font-size:18px;
 					font-weight: 600;
@@ -311,7 +349,12 @@ section.content{
 			}
 		}
 		.lists{
-			justify-content: space-between;
+			justify-content: center;
+
+			.list{
+				margin-bottom: 20px;
+				margin-right: 10px;
+			}
 			ul.circle{
 				list-style-type: disc;
 				li{
@@ -342,7 +385,10 @@ section.content{
 			height: 270px;
 			border-radius: 10px;
 			overflow: hidden;
-			margin: 0 auto 60px;
+			margin: 0 auto 30px;
+			@media screen and (max-width: 359px){
+				display: none;
+			}
 			thead{
 				background: #9C4757;
 				tr{
@@ -378,47 +424,56 @@ section.content{
 
 		//MEDIAAAAAA 
 
-		// @media screen and (max-width: 980px) {
-			// 	table {
-				// 		border: 0;
-				// 	}
+		@media screen and (max-width: 768px) {
+			table {
+				border: 0;
+			}
 
-				// 	table thead {
-					// 		display: none;
-					// 	}
+			table thead {
+				display: none;
+			}
 
-					// 	table tr {
-						// 		margin-bottom: 10px;
-						// 		display: block;
-						// 		border-bottom: 2px solid #a0a0a0;
-						// 	}
+			table tr {
+				margin-bottom: 20px;
+				display: block;
+				border-bottom: 2px solid #a0a0a0;
+			}
 
-						// 	table td {
-							// 		display: block;
-							// 		text-align: right;
-							// 		font-size: 13px;
-							// 		border: 0;
-							// 		border-bottom: 1px dotted #a0a0a0;
-							// 		width: 100%;
-							// 	}
+			table td {
+				display: block;
+				text-align: right;
+				font-size: 13px;
+				border-bottom: 1px dotted #a0a0a0;
+				width: 100%;
+			}
 
-							// 	table td:last-child {
-								// 		border-bottom: 0;
-								// 	}
+			table td:last-child {
+				border-bottom: 0;
+			}
 
-								// 	table td:before {
-									// 		content: attr(data-label);
-									// 		float: left;
-									// 		text-transform: uppercase;
-									// 		font-weight: bold;
-									// 		display: block;
-									// 		padding: 0 8px;
-									// 	}
-									// }
+			table td:before {
+				content: attr(data-label);
+				float: left;
+				display: block;
+				padding: 0 8px;
+			}
+		}
 	}
 }
+	@media screen and (max-width: 739px){
+		section.content{
+			flex-flow: column;
+			div.about, aside{
+				width: 100%;
+			}
+			aside{
+				padding-right: 20px;
+				text-align: center;
+			}
+		}
+	}
 
-		//ABOUT END
+//ABOUT END
 
 	
 
@@ -440,8 +495,12 @@ footer{
 		display: flex;
 		justify-content: space-around;
 		flex-flow: row wrap;
+						@media screen and (max-width: 477px){
+				text-align: center;
+			}
 		div{
 			    padding: 0 10px;
+			    margin-bottom: 30px;
 		}
 		h4{
 			font-size: 18px;
@@ -457,7 +516,11 @@ footer{
 				position: absolute;
 				left: 0;
 				top: 25px;
+				@media screen and (max-width: 672px){
+				display: none;
 			}
+			}
+			
 			span{
 				display: inline-block;
 				text-transform: uppercase;
